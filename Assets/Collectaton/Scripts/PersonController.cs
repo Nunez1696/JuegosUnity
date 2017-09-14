@@ -5,28 +5,30 @@ using UnityEngine.UI;
 
 public class PersonController : MonoBehaviour {
 
-	private Rigidbody2D rb; 
-	public float speed;
+	[SerializeField] public float speed;
 	private int contador; 
 	public Text ScorteText; 
 
 	void Start () {
-
-		rb = GetComponent<Rigidbody2D>();
+		
 		contador = 0; 
 		SetCountText (); 
 	}
 	
 
-	void FixedUpdate () {
+	void Update () {
 
-		float MovHorizontal = Input.GetAxis ("Horizontal");
-		float MovVertical = Input.GetAxis ("Vertical");
+		if (Input.GetKey (KeyCode.A)) {
 
-		Vector2 Movimiento = new Vector2 (MovHorizontal, MovVertical);
+			transform.Translate (Vector2.left * Time.deltaTime * speed);
+		}
 
-		rb.AddForce (Movimiento * speed);
+		if (Input.GetKey (KeyCode.D)) {
 
+			transform.Translate (Vector2.right * Time.deltaTime * speed);
+
+		}
+	
 	}
 
 	void OnTriggerEnter2D(Collider2D other){

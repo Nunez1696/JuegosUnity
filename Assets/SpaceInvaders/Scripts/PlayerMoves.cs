@@ -31,9 +31,9 @@ public class PlayerMoves : MonoBehaviour {
 		}
 			
 
-		if (Input.GetKey (KeyCode.Space)) {
+		//if (Input.GetKey (KeyCode.Space)) {
 
-			Instantiate (bullet, transform.position, Quaternion.identity);
+			//Instantiate (bullet, transform.position, Quaternion.identity);
 		}
-	}
+
 }
