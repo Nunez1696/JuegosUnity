@@ -140,7 +140,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 148, y: -85}
+  m_AnchoredPosition: {x: 148, y: -178}
   m_SizeDelta: {x: 244.8, y: 74.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &139996497
@@ -309,7 +309,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2f654cad376cdf4aa7b6c9486f3dc68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 50
+  speed: 200
   ScorteText: {fileID: 139996497}
 --- !u!212 &474574136
 SpriteRenderer:
@@ -373,7 +373,7 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 474574134}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0

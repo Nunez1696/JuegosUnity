@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMoves : MonoBehaviour {
 
 	[SerializeField] float speed;
-	[SerializeField] int bullet;
+	[SerializeField] GameObject bullet;
 
 
 
@@ -20,20 +20,21 @@ public class PlayerMoves : MonoBehaviour {
 	void Update () {
 
 
-		if (Input.GetKey (KeyCode.A) && transform.position.x > - 5.7f  ) {
+		if (Input.GetKey (KeyCode.A) && transform.position.x > -5.7f) {
 
 			transform.Translate (Vector2.left * Time.deltaTime * speed);
 		}
 
-		if (Input.GetKey (KeyCode.D) && transform.position.x < 5.8f ) {
+		if (Input.GetKey (KeyCode.D) && transform.position.x < 5.8f) {
 
 			transform.Translate (Vector2.right * Time.deltaTime * speed);
 		}
 			
 
-		//if (Input.GetKey (KeyCode.Space)) {
+		if (Input.GetKeyDown (KeyCode.Space)) {
 
-			//Instantiate (bullet, transform.position, Quaternion.identity);
+			Instantiate (bullet, transform.position, Quaternion.identity);
 		}
 
+	}
 }
